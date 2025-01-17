@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bruno Angelozzi - Web Developer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+
+    <script>
+        const ctx = document.getElementById('skillsChart').getContext('2d');
+        const skillsChart = new Chart(ctx, {
+            type: 'radar',
+            data: {
+                labels: ['HTML5', 'CSS3', 'JavaScript', 'React.js', 'Node.js'],
+                datasets: [{
+                    label: 'Nivel de habilidades',
+                    data: [90, 85, 80, 75, 70],
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 2,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    r: {
+                        angleLines: { display: false },
+                        suggestedMin: 0,
+                        suggestedMax: 100
+                    }
+                }
+            }
+        });
+    </script>
+
+    <main>
+        <section id="home">
+            <div class="hero">
+                <div class="hero-content">
+                    <h1>Bruno Angelozzi</h1>
+                    <p>Web Developer & Designer</p>
+                    <a href="#about" class="btn">Learn More</a>
+                </div>
+                <div class="hero-image">
+                    <img src="images/Captain, Brice Laville Saint-Martin.jfif" alt="Hero Illustration">
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Botón de tema -->
+    <button id="theme-toggle" class="theme-toggle">🌙</button>
+
+    <!-- Menú hamburguesa -->
+    <div id="hamburger-menu" class="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <nav id="nav-menu" class="nav-menu">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#skills">Skills</a></li>
+
+        </ul>
+    </nav>
+        
+
+        <section id="about">
+            <div class="about-container">
+                <div class="about-text">
+                    <h2>About Me</h2>
+                    <p>
+                        ¡Hola! Soy un desarrollador web creativo y orientado a los detalles, apasionado por crear sitios web intuitivos, fáciles de usar y visualmente impresionantes. Con experiencia en desarrollo front-end, doy vida a los diseños con código limpio y eficiente.
+                    </p>
+                    <p>
+                        Cuando no estoy codificando, disfruto explorando las últimas tendencias tecnológicas, diseñando nuevos proyectos y perfeccionando mis habilidades para ofrecer la mejor experiencia de usuario posible.                    </p>
+                </div>
+                <div class="about-image">
+                    <img src="images/WhatsApp Image 2024-10-26 at 14.53.01 (1).jpg" alt="About Me Illustration">
+                </div>
+            </div>
+        </section>
+        
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project-grid">
+                <div class="project">
+                    <img src="images/ideas-sobre-proyectos-de-programacion-para.jpg" alt="Project 1">
+                    <h3>Project 1</h3>
+                    <p>A responsive e-commerce website built with React and Node.js.</p>
+                </div>
+                <div class="project">
+                    <img src="images/primer-proyecto-de-programacion.webp" alt="Project 2">
+                    <h3>Project 2</h3>
+                    <p>A social media dashboard with real-time updates using Socket.io.</p>
+                </div>
+                <div class="project">
+                    <img src="images/programador-profesional-trabajando-tarde-oscura-oficina_1098-18705-1633884691.webp" alt="Project 3">
+                    <h3>Project 3</h3>
+                    <p>A mobile-first weather app with geolocation and OpenWeatherMap API.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills-container">
+                <!-- Descripción breve de las habilidades -->
+                <p>En esta sección se destacan las habilidades clave que definen mi experiencia y capacidad profesional. Desde desarrollo front-end hasta diseño UX/UI, aquí puedes explorar lo que me apasiona hacer.</p>
+                
+                <!-- Canvas para el gráfico -->
+                <canvas id="skillsChart" class="skills-animation"></canvas>
+                
+                <!-- Lista de habilidades con íconos -->
+                <div class="skills-list">
+                    <div class="skill">
+                        <img src="images/html5.webp" alt="HTML Icon">
+                        <p>HTML5</p>
+                    </div>
+                    <div class="skill">
+                        <img src="images/css.png" alt="CSS Icon">
+                        <p>CSS3</p>
+                    </div>
+                    <div class="skill">
+                        <img src="images/javascript.png" alt="JavaScript Icon">
+                        <p>JavaScript</p>
+                    </div>
+                    <div class="skill">
+                        <img src="images/react.webp" alt="React Icon">
+                        <p>React.js</p>
+                    </div>
+                    <div class="skill">
+                        <img src="images/node-js-icon-8.jpg" alt="Node.js Icon">
+                        <p>Node.js</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form id="contact-form">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <div class="social-links">
+                <a href="#" target="_blank">LinkedIn</a>
+                <a href="#" target="_blank">GitHub</a>
+                <a href="#" target="_blank">Instagram</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Bruno Angelozzi. All rights reserved.</p>
+    </footer>
+
+    <script src="function.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>
+
